@@ -38,6 +38,7 @@ class MyApp extends ConsumerWidget {
       ),
     ];
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: ScreenUtilInit(
         designSize: Size(375, 812),
         minTextAdapt: true,
@@ -49,6 +50,7 @@ class MyApp extends ConsumerWidget {
               return screens[currentIndex].pages;
             },
           ),
+          bottomNavigationBar: CustomBottomNavigationBar(items: screens),
         ),
       ),
     );

@@ -13,6 +13,7 @@ class CustomBottomNavigationBar extends ConsumerWidget {
       builder: (context, ref, child) {
         final int currentIndex = ref.watch(currentIndexProvider);
         return StylishBottomBar(
+          backgroundColor: Colors.white,
           items: items
               .map(
                 (item) => BottomBarItem(
@@ -20,6 +21,7 @@ class CustomBottomNavigationBar extends ConsumerWidget {
                   title: Text(item.title),
                   selectedIcon: Icon(item.selectedicon),
                   selectedColor: Colors.orange,
+                  backgroundColor: Colors.orange,
                 ),
               )
               .toList(),
