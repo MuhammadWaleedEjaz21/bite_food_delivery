@@ -96,7 +96,7 @@ class HomePage extends ConsumerWidget {
               15.verticalSpace,
               ListView.separated(
                 itemBuilder: (context, index) {
-                  final restaurantRandom = restaurants..shuffle();
+                  final restaurantRandom = [...restaurants]..shuffle();
                   return CustomRestaurantCard(
                     restaurant: restaurantRandom[index],
                   );

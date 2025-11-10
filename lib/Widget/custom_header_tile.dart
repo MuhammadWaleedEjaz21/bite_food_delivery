@@ -30,7 +30,7 @@ class CustomHeaderTile extends StatelessWidget {
                   context,
                 ).listTileTheme.leadingAndTrailingTextStyle,
               ),
-              style: IconButton.styleFrom(
+              style: TextButton.styleFrom(
                 backgroundColor: Theme.of(
                   context,
                 ).listTileTheme.leadingAndTrailingTextStyle!.decorationColor,
