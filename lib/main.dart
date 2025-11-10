@@ -48,7 +48,7 @@ class MyApp extends ConsumerWidget {
         debugShowCheckedModeBanner: false,
         theme: appTheme,
         darkTheme: darkTheme,
-        themeMode: ThemeMode.light,
+        themeMode: ThemeMode.dark,
         home: child,
       ),
       child: Consumer(

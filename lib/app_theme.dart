@@ -84,6 +84,7 @@ ThemeData appTheme = ThemeData(
     shadowColor: Colors.grey,
     elevation: 5,
   ),
+  secondaryHeaderColor: Colors.grey.shade100,
 );
 
 //----------------------------------------------------------------
@@ -169,4 +170,5 @@ ThemeData darkTheme = ThemeData(
     shadowColor: Color.fromARGB(255, 64, 94, 153),
     elevation: 5,
   ),
+  secondaryHeaderColor: Color.fromARGB(255, 33, 51, 87),
 );
