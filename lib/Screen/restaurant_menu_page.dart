@@ -13,7 +13,7 @@ class RestaurantMenuPage extends ConsumerWidget {
     return Scaffold(
       appBar: CustomAppBar(
         title: Text(
-          'Popular Restaurants',
+          'All Restaurants',
           style: Theme.of(context).appBarTheme.titleTextStyle,
         ),
         backButton: true,
@@ -24,7 +24,7 @@ class RestaurantMenuPage extends ConsumerWidget {
         data: (data) => ListView.separated(
           padding: EdgeInsets.symmetric(horizontal: 15.w),
           itemBuilder: (context, index) {
-            final restaurantRandom = data..shuffle();
+            final restaurantRandom = [...data]..shuffle();
             return CustomRestaurantCard(restaurant: restaurantRandom[index]);
           },
           separatorBuilder: (context, index) => 20.verticalSpace,

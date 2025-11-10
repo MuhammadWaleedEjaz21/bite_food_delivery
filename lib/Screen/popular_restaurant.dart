@@ -13,7 +13,7 @@ class PopularRestaurantPage extends ConsumerWidget {
     return Scaffold(
       appBar: CustomAppBar(
         title: Text(
-          'All Restaurants',
+          'Popular Restaurants',
           style: Theme.of(context).appBarTheme.titleTextStyle,
         ),
         backButton: true,

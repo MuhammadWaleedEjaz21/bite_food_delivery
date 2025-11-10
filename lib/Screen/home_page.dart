@@ -1,5 +1,6 @@
 import 'package:bite_food_delivery/Provider/category_provider.dart';
 import 'package:bite_food_delivery/Provider/restaurants_provider.dart';
+import 'package:bite_food_delivery/Screen/cart_screen.dart';
 import 'package:bite_food_delivery/Screen/category_menu_page.dart';
 import 'package:bite_food_delivery/Screen/restaurant_menu_page.dart';
 import 'package:bite_food_delivery/Widget/custom_app_bar.dart';
@@ -34,7 +35,12 @@ class HomePage extends ConsumerWidget {
         ),
         trailing: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => CartScreen()),
+              );
+            },
             style: IconButton.styleFrom(
               backgroundColor: Theme.of(context).appBarTheme.iconTheme?.color,
             ),
