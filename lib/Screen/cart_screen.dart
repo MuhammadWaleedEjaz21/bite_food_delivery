@@ -1,4 +1,5 @@
 import 'package:bite_food_delivery/Widget/custom_app_bar.dart';
+import 'package:bite_food_delivery/Widget/custom_cart_item.dart';
 import 'package:bite_food_delivery/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -26,16 +27,24 @@ class CartScreen extends ConsumerWidget {
                   child: Text(
                     'EDIT',
                     style: TextStyle(
-                      color: Colors.green,
+                      color: Theme.of(context).appBarTheme.iconTheme?.color,
                       decorationStyle: TextDecorationStyle.solid,
                       decoration: TextDecoration.underline,
                       fontSize: 20.r,
-                      decorationColor: Colors.green,
+                      decorationColor: Theme.of(
+                        context,
+                      ).appBarTheme.iconTheme?.color,
                     ),
                   ),
                 ),
                 15.horizontalSpace,
               ],
+            ),
+            body: ListView.separated(
+              padding: EdgeInsets.symmetric(horizontal: 10.w),
+              itemBuilder: (context, index) => CustomCartItem(),
+              separatorBuilder: (context, index) => 20.verticalSpace,
+              itemCount: 5,
             ),
           );
         },

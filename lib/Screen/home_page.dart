@@ -2,6 +2,7 @@ import 'package:bite_food_delivery/Provider/category_provider.dart';
 import 'package:bite_food_delivery/Provider/restaurants_provider.dart';
 import 'package:bite_food_delivery/Screen/cart_screen.dart';
 import 'package:bite_food_delivery/Screen/category_menu_page.dart';
+import 'package:bite_food_delivery/Screen/category_restaurant_menu.dart';
 import 'package:bite_food_delivery/Screen/restaurant_menu_page.dart';
 import 'package:bite_food_delivery/Widget/custom_app_bar.dart';
 import 'package:bite_food_delivery/Widget/custom_category_card.dart';
@@ -87,8 +88,11 @@ class HomePage extends ConsumerWidget {
                 height: 150.h,
                 child: ListView.separated(
                   scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, index) =>
-                      CustomCategoryCard(index: index, category: data[index]),
+                  itemBuilder: (context, index) => CustomCategoryCard(
+                    index: index,
+                    category: data[index],
+                    page: CategoryRestaurantMenu(),
+                  ),
                   separatorBuilder: (context, index) => 10.horizontalSpace,
                   itemCount: 4,
                 ),
